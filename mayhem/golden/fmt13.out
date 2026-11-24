@@ -1,0 +1,16 @@
+subroutine SSYR2(UPLO)
+character :: UPLO
+integer :: INFO
+logical :: LSAME
+external :: LSAME
+INFO = 0
+if (.not. LSAME(UPLO, "U") .and. .not. LSAME(UPLO, "L")) then
+    INFO = 1
+else
+    INFO = 2
+end if
+
+return
+end subroutine SSYR2
+
+exit=0

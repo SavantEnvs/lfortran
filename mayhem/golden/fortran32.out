@@ -1,0 +1,13 @@
+program coarray_allocate_01
+implicit none
+integer(4), allocatable :: a
+integer(4), dimension(:), allocatable, save :: b
+character(len=100, kind=1) :: errmsg
+integer(4) :: stat
+integer(4), allocatable :: x
+allocate(a, b(10), x, stat=stat, errmsg=errmsg)
+a = this_image()
+x = this_image()
+deallocate(a, b, x, stat=stat, errmsg=errmsg)
+end program coarray_allocate_01
+exit=0

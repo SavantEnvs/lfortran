@@ -1,0 +1,41 @@
+module fpm_dependency
+implicit none
+type :: dependency_config_t
+    character(len=:, kind=1), allocatable :: name
+    character(len=:, kind=1), allocatable :: path
+end type dependency_config_t
+type :: dependency_node_t
+    logical(4) :: done = .false.
+    character(len=:, kind=1), allocatable :: proj_dir
+    character(len=:, kind=1), allocatable :: revision
+    logical(4) :: update = .false.
+end type dependency_node_t
+type :: dependency_tree_t
+    character(len=:, kind=1), allocatable :: cache
+    type(dependency_node_t), dimension(:), allocatable :: dep
+    character(len=:, kind=1), allocatable :: dep_dir
+    integer(4) :: ndep = 0
+    integer(4) :: unit
+    integer(4) :: verbosity = 1
+contains
+    procedure, private :: add_dependency
+    procedure, private :: find_dependency
+end type dependency_tree_t
+
+contains
+
+pure subroutine add_dependency(self, dependency)
+    type(dependency_config_t), intent(in) :: dependency
+    integer(4) :: id
+    class(dependency_tree_t), intent(inout) :: self
+    id = self%find_dependency(dependency)
+end subroutine add_dependency
+
+pure integer(4) function find_dependency(self, dependency) result(pos)
+    type(dependency_config_t), intent(in) :: dependency
+    class(dependency_tree_t), intent(in) :: self
+end function find_dependency
+
+end module fpm_dependency
+
+exit=0

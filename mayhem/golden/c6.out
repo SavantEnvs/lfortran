@@ -1,0 +1,21 @@
+
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <string.h>
+#include <lfortran_intrinsics.h>
+
+
+
+
+// Implementations
+int main(int argc, char* argv[])
+{
+    _lpython_set_argv(argc, argv);
+    static char * char1 = "Goat";
+    char * char2 = NULL;
+    const char* char_param = "App";
+    _lfortran_strcpy(&char2, "Balle", 1);
+    return 0;
+}
+exit=0

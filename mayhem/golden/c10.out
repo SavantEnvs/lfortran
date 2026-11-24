@@ -1,0 +1,28 @@
+
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <string.h>
+#include <lfortran_intrinsics.h>
+
+
+struct dimension_descriptor
+{
+    int32_t lower_bound, length, stride;
+};
+
+struct i32
+{
+    int32_t *data;
+    struct dimension_descriptor dims[32];
+    int32_t n_dims;
+    int32_t offset;
+    bool is_allocated;
+};
+
+
+
+
+// Implementations
+const struct i32* _lfortran_c_module_12_declaration1_arr;
+exit=0

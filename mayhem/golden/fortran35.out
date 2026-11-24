@@ -1,0 +1,17 @@
+program do7
+implicit none
+integer(4) :: a
+integer(4) :: i
+do i = 1, 10
+    a = f(5)
+end do
+
+contains
+
+integer(4) function f(a)
+    integer(4), intent(in) :: a
+    f = a + 1
+end function f
+
+end program do7
+exit=0

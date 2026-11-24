@@ -1,0 +1,20 @@
+style suggestion: Use '==' instead of '.eq.'
+ --> tests/exit1.f90:6:12
+  |
+6 |     if ( i .eq. 5 ) then
+  |            ^^^^ help: write this as '=='
+
+
+Note: Please report unclear, confusing or incorrect messages as bugs at
+https://github.com/lfortran/lfortran/issues.
+program exit1
+integer :: i, N
+N = 10
+do i = 1, N
+    print *, i
+    if (i == 5) then
+        call exit(1)
+    end if
+end do
+end program exit1
+exit=0

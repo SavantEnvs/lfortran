@@ -1,0 +1,79 @@
+#include <inttypes.h>
+
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <string.h>
+#include <lfortran_intrinsics.h>
+
+
+struct dimension_descriptor
+{
+    int32_t lower_bound, length, stride;
+};
+
+struct i32
+{
+    int32_t *data;
+    struct dimension_descriptor dims[32];
+    int32_t n_dims;
+    int32_t offset;
+    bool is_allocated;
+};
+
+void coarray_saved_sub();
+void mod_sub();
+
+
+
+// Implementations
+int32_t _lfortran_c_module_17_coarray_saved_mod_w;
+struct i32* _lfortran_c_module_17_coarray_saved_mod_x;
+static int32_t _lfortran_c_module_17_coarray_saved_mod_y;
+static int32_t _lfortran_module_array_0_data[10] = {0};
+static struct i32 _lfortran_module_array_0_value = {.data = _lfortran_module_array_0_data, .dims = {{1, 10, 1}}, .n_dims = 1, .offset = 0, .is_allocated = false};
+struct i32* _lfortran_c_module_17_coarray_saved_mod_z = &_lfortran_module_array_0_value;
+void coarray_saved_sub()
+{
+    static int32_t w;
+    struct i32 x_value;
+    struct i32* x = &x_value;
+    int32_t x_data[10];
+    x->data = x_data;
+    x->n_dims = 1;
+    x->offset = 0;
+    x->dims[0].lower_bound = 1;
+    x->dims[0].length = 10;
+    x->dims[0].stride = 1;
+}
+
+void mod_sub();
+
+int main(int argc, char* argv[])
+{
+    _lpython_set_argv(argc, argv);
+    static int32_t a;
+    struct i32 b_value;
+    struct i32* b = &b_value;
+    int32_t b_data[10];
+    b->data = b_data;
+    b->n_dims = 1;
+    b->offset = 0;
+    b->dims[0].lower_bound = 1;
+    b->dims[0].length = 10;
+    b->dims[0].stride = 1;
+    int32_t c;
+    struct i32 d_value;
+    struct i32* d = &d_value;
+    int32_t d_data[10];
+    d->data = d_data;
+    d->n_dims = 1;
+    d->offset = 0;
+    d->dims[0].lower_bound = 1;
+    d->dims[0].length = 10;
+    d->dims[0].stride = 1;
+    mod_sub();
+    coarray_saved_sub();
+    return 0;
+}
+exit=0

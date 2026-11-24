@@ -1,0 +1,10 @@
+semantic error: function interface must be specified explicitly; you can enable implicit interfaces with `--implicit-interface`
+  --> tests/fixed_form1.f:35:16
+   |
+35 |       external f
+   |                ^ 
+
+
+Note: Please report unclear, confusing or incorrect messages as bugs at
+https://github.com/lfortran/lfortran/issues.
+exit=2

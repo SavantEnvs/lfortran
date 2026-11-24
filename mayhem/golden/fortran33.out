@@ -1,0 +1,13 @@
+program main
+implicit none
+print *, xyz()
+
+contains
+
+real(4) function xyz()
+    print *, "abc"
+    xyz = 1.00000000e+00
+end function xyz
+
+end program main
+exit=0

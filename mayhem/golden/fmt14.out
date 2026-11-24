@@ -1,0 +1,18 @@
+subroutine array_op_in_bounds(x, y, z)
+implicit none
+real, intent(out) :: x(4)
+real, intent(in) :: y(4), z(:)
+x = y + 1.
+x = z
+call scale(x, z)
+
+contains
+
+    elemental subroutine scale(a, b)
+    real, intent(inout) :: a
+    real, intent(in) :: b
+    a = a*b
+    end subroutine scale
+
+end subroutine array_op_in_bounds
+exit=0

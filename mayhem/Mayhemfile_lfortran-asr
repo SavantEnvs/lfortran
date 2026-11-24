@@ -1,0 +1,11 @@
+project: savantenvs/lfortran
+target: lfortran-asr
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/lfortran-asr/testsuite
+
+cmds:
+  - cmd: /mayhem/mayhem/build-fuzz/fuzz/lfortran-asr
+    libfuzzer: true
+    timeout: 30

@@ -1,0 +1,5 @@
+program array13
+implicit none
+integer(4), dimension(5), save :: numbers = [5, 4, 2, 1, 3]
+end program array13
+exit=0

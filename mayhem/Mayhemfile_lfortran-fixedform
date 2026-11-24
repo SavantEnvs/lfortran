@@ -1,0 +1,11 @@
+project: savantenvs/lfortran
+target: lfortran-fixedform
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/lfortran-fixedform/testsuite
+
+cmds:
+  - cmd: /mayhem/mayhem/build-fuzz/fuzz/lfortran-fixedform
+    libfuzzer: true
+    timeout: 30

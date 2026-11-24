@@ -1,0 +1,164 @@
+#include <inttypes.h>
+
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <string.h>
+#include <lfortran_intrinsics.h>
+
+
+struct dimension_descriptor
+{
+    int32_t lower_bound, length, stride;
+};
+
+struct l32
+{
+    bool *data;
+    struct dimension_descriptor dims[32];
+    int32_t n_dims;
+    int32_t offset;
+    bool is_allocated;
+};
+
+
+struct r32
+{
+    float *data;
+    struct dimension_descriptor dims[32];
+    int32_t n_dims;
+    int32_t offset;
+    bool is_allocated;
+};
+
+
+struct i32
+{
+    int32_t *data;
+    struct dimension_descriptor dims[32];
+    int32_t n_dims;
+    int32_t offset;
+    bool is_allocated;
+};
+
+
+
+
+// Implementations
+int main(int argc, char* argv[])
+{
+    _lpython_set_argv(argc, argv);
+    bool a;
+    struct l32 b_value;
+    struct l32* b = &b_value;
+    bool b_data[2];
+    b->data = b_data;
+    b->n_dims = 1;
+    b->offset = 0;
+    b->dims[0].lower_bound = 1;
+    b->dims[0].length = 2;
+    b->dims[0].stride = 1;
+    struct l32 b2_value;
+    struct l32* b2 = &b2_value;
+    bool b2_data[6];
+    b2->data = b2_data;
+    b2->n_dims = 2;
+    b2->offset = 0;
+    b2->dims[1].lower_bound = 1;
+    b2->dims[1].length = 2;
+    b2->dims[1].stride = 1;
+    b2->dims[0].lower_bound = 1;
+    b2->dims[0].length = 3;
+    b2->dims[0].stride = (1*2);
+    struct l32 b3_value;
+    struct l32* b3 = &b3_value;
+    bool b3_data[4];
+    b3->data = b3_data;
+    b3->n_dims = 3;
+    b3->offset = 0;
+    b3->dims[2].lower_bound = 1;
+    b3->dims[2].length = 2;
+    b3->dims[2].stride = 1;
+    b3->dims[1].lower_bound = 1;
+    b3->dims[1].length = 1;
+    b3->dims[1].stride = (1*2);
+    b3->dims[0].lower_bound = 1;
+    b3->dims[0].length = 2;
+    b3->dims[0].stride = ((1*2)*1);
+    float d;
+    struct r32 e_value;
+    struct r32* e = &e_value;
+    float e_data[5];
+    e->data = e_data;
+    e->n_dims = 1;
+    e->offset = 0;
+    e->dims[0].lower_bound = 1;
+    e->dims[0].length = 5;
+    e->dims[0].stride = 1;
+    struct r32 e2_value;
+    struct r32* e2 = &e2_value;
+    float e2_data[6];
+    e2->data = e2_data;
+    e2->n_dims = 2;
+    e2->offset = 0;
+    e2->dims[1].lower_bound = 1;
+    e2->dims[1].length = 3;
+    e2->dims[1].stride = 1;
+    e2->dims[0].lower_bound = 1;
+    e2->dims[0].length = 2;
+    e2->dims[0].stride = (1*3);
+    struct r32 e3_value;
+    struct r32* e3 = &e3_value;
+    float e3_data[6];
+    e3->data = e3_data;
+    e3->n_dims = 3;
+    e3->offset = 0;
+    e3->dims[2].lower_bound = 1;
+    e3->dims[2].length = 3;
+    e3->dims[2].stride = 1;
+    e3->dims[1].lower_bound = 1;
+    e3->dims[1].length = 2;
+    e3->dims[1].stride = (1*3);
+    e3->dims[0].lower_bound = 1;
+    e3->dims[0].length = 1;
+    e3->dims[0].stride = ((1*3)*2);
+    int32_t f;
+    struct i32 g_value;
+    struct i32* g = &g_value;
+    int32_t g_data[3];
+    g->data = g_data;
+    g->n_dims = 1;
+    g->offset = 0;
+    g->dims[0].lower_bound = 1;
+    g->dims[0].length = 3;
+    g->dims[0].stride = 1;
+    struct i32 g2_value;
+    struct i32* g2 = &g2_value;
+    int32_t g2_data[18];
+    g2->data = g2_data;
+    g2->n_dims = 2;
+    g2->offset = 0;
+    g2->dims[1].lower_bound = 1;
+    g2->dims[1].length = 3;
+    g2->dims[1].stride = 1;
+    g2->dims[0].lower_bound = 1;
+    g2->dims[0].length = 6;
+    g2->dims[0].stride = (1*3);
+    struct i32 g3_value;
+    struct i32* g3 = &g3_value;
+    int32_t g3_data[24];
+    g3->data = g3_data;
+    g3->n_dims = 3;
+    g3->offset = 0;
+    g3->dims[2].lower_bound = 1;
+    g3->dims[2].length = 2;
+    g3->dims[2].stride = 1;
+    g3->dims[1].lower_bound = 1;
+    g3->dims[1].length = 3;
+    g3->dims[1].stride = (1*2);
+    g3->dims[0].lower_bound = 1;
+    g3->dims[0].length = 4;
+    g3->dims[0].stride = ((1*2)*3);
+    return 0;
+}
+exit=0

@@ -1,0 +1,11 @@
+project: savantenvs/lfortran
+target: lfortran-cpp-backend
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/lfortran-cpp-backend/testsuite
+
+cmds:
+  - cmd: /mayhem/mayhem/build-fuzz/fuzz/lfortran-cpp-backend
+    libfuzzer: true
+    timeout: 30

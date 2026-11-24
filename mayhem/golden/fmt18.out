@@ -1,0 +1,20 @@
+style suggestion: Use 'end do' instead of 'enddo'
+  --> tests/do1.f90:21:1
+   |
+21 | enddo
+   | ^^^^^ help: write this as 'end do'
+
+syntax error: Expected program end
+  --> tests/do1.f90:1:1 - 36:14
+   |
+ 1 |    do i = 1, 5
+   |    ^^^^^^^^^^^...
+...
+   |
+36 |    end subroutine
+   | ...^^^^^^^^^^^^^^ 
+
+
+Note: Please report unclear, confusing or incorrect messages as bugs at
+https://github.com/lfortran/lfortran/issues.
+exit=2

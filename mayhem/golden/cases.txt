@@ -1,0 +1,37 @@
+c1|--show-c --no-color|tests/array1.f90
+c2|--show-c --no-color|tests/array15.f90
+c3|--show-c --no-color|tests/array5.f90
+c4|--show-c --no-color|tests/array_op_in_bounds.f90
+c5|--show-c --no-color|tests/array_op_simplifier_test.f90
+c6|--show-c --no-color|tests/character2.f90
+c7|--show-c --no-color|tests/coarray_saved_01.f90
+c8|--show-c --no-color|tests/collect_occurence5.f90
+c9|--show-c --no-color|tests/complex1.f90
+c10|--show-c --no-color|tests/declaration1.f90
+c11|--show-c --no-color|tests/dependency_test_03_module.f90
+c12|--show-c --no-color|tests/do5.f90
+fmt13|fmt --no-color|tests/allow_implicit_interface3.f90
+fmt14|fmt --no-color|tests/array_op_in_bounds.f90
+fmt15|fmt --no-color|tests/cast_node_m_value.f90
+fmt16|fmt --no-color|tests/coarray_teams_02.f90
+fmt17|fmt --no-color|tests/critical1.f90
+fmt18|fmt --no-color|tests/do1.f90
+fmt19|fmt --no-color|tests/exit1.f90
+fmt20|fmt --no-color|tests/finalize_01.f90
+fixed21|--fixed-form --implicit-typing --show-asr --no-color|tests/collect_occurence6.f
+fixed22|--fixed-form --implicit-typing --show-asr --no-color|tests/common2.f
+fixed23|--fixed-form --implicit-typing --show-asr --no-color|tests/continue_body_if_loop.f
+fixed24|--fixed-form --implicit-typing --show-asr --no-color|tests/dimension_attr.f
+fixed25|--fixed-form --implicit-typing --show-asr --no-color|tests/fixed_form1.f
+cpp26|--cpp --show-asr --no-color|tests/preprocessor10.f90
+cpp27|--cpp --show-asr --no-color|tests/preprocessor11.f90
+cpp28|--cpp --show-asr --no-color|tests/preprocessor12.f90
+cpp29|--cpp --show-asr --no-color|tests/preprocessor13.f90
+fortran30|--show-fortran --no-color|tests/array13.f90
+fortran31|--show-fortran --no-color|tests/array_op_simplifier_test.f90
+fortran32|--show-fortran --no-color|tests/coarray_allocate_01.f90
+fortran33|--show-fortran --no-color|tests/collect_occurence2.f90
+fortran34|--show-fortran --no-color|tests/dependency_test_01.f90
+fortran35|--show-fortran --no-color|tests/do7.f90
+mod36|mod --show-asr --no-color|tests/interop/mod1-14.mod
+cc37|--continue-compilation --show-asr --no-color|tests/errors/continue_compilation_block_interface.f90

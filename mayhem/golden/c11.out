@@ -1,0 +1,39 @@
+#include <inttypes.h>
+
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <string.h>
+#include <lfortran_intrinsics.h>
+
+void _lcompilers_get_command_argument_(int32_t number, int32_t *length);
+void default_help();
+void check_commandline();
+
+
+
+// Implementations
+int32_t _lfortran_get_command_argument_length(int32_t x_0);
+
+
+void _lcompilers_get_command_argument_(int32_t number, int32_t *length)
+{
+    int32_t length_to_allocate;
+    length_to_allocate = 0;
+    length_to_allocate = _lfortran_get_command_argument_length(number);
+    (*length) = length_to_allocate;
+}
+
+void default_help()
+{
+    int32_t ilength;
+    _lcompilers_get_command_argument_(0, &ilength);
+}
+
+
+void check_commandline()
+{
+    default_help();
+}
+
+exit=0
